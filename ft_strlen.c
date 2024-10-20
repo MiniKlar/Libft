@@ -12,7 +12,7 @@
 
 //#include <stdio.h>
 
-int strlen(char *string)
+int ft_strlen(char *string)
 {
     int i;
     i = 0;

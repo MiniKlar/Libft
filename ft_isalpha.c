@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int is_alpha(char *string)
+int ft_is_alpha(char *string)
 {
     while (*string)
     {
