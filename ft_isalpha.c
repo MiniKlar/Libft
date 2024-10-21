@@ -27,8 +27,8 @@ int ft_is_alpha(char *string)
     return(0);
 }
 
-int main(void)
+/*int main(void)
 {
     char string[100] = "  Salut";
     printf("%d\n", is_alpha(string));
-}
+}*/
