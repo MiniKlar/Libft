@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:56:16 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/21 15:24:08 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/24 15:11:17 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,15 @@ void *ft_memchr(const void *s, int c, size_t n)
     {
         if ((const unsigned char)c == (*(const unsigned char *)s))
             return ((void *)s);
-        i++;
+        else
+        {
+            i++;
+            s++;
+        }
     }
     return (NULL);
 }
 int main(void)
 {
-    char    str[100] = "Salut";
-    printf("%p\n", ft_memchr(str, 'u', 4));
+    printf("%p\n", ft_memchr("Salut", 'a', 1));
 }
