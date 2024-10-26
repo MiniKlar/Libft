@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrch.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 16:45:20 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/24 20:56:53 by miniklar         ###   ########.fr       */
+/*   Created: 2024/10/24 20:23:25 by miniklar          #+#    #+#             */
+/*   Updated: 2024/10/24 20:23:42 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char    *ft_strchr(const char *s, int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    while (s)
-        s++;
-    while (s)
+    while (*s1 && *s2 && n > 0)
     {
-        if (*s == (const char)c)
-            return ((char *)s);
-        s--; 
+        if (*s1 != *s2)
+            return (*s1 - *s2);
+        n--;
+        s1++;
+        s2++;
     }
-    return (NULL);
+    return (0);
 }
+
 /*int main(void)
 {
-    printf("%s\n", strrchr("sazlutztoi", 'u'));
+    printf("%d\n", ft_strncmp("salut", "salzt", 3));
+    printf("%d\n", ft_strncmp("salut", "bonjour", 5));
+    printf("%d\n", ft_strncmp("Hello", "sazut", 6));
+    printf("%d\n", ft_strncmp("salut", "soi", 3));
 }*/
