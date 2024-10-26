@@ -6,16 +6,15 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:54 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/21 14:23:13 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/26 23:05:56 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t ft_strlcpy(char *dest, char *src, size_t size)
 {
-    size_t srclen = strlen(src);
+    size_t srclen = ft_strlen(src);
     size_t i;
 
     i = 0;
@@ -36,6 +35,3 @@ int main(void)
     printf("%zu\n", ft_strlcpy(dest, src, 100));
     printf("%s\n", dest);
 }
-
-
-// ajouter fonction strlen pour le bon return

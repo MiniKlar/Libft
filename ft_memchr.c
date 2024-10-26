@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:56:16 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/24 15:11:17 by miniklar         ###   ########.fr       */
+/*   Updated: 2024/10/26 23:06:35 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
@@ -30,7 +30,7 @@ void *ft_memchr(const void *s, int c, size_t n)
     }
     return (NULL);
 }
-int main(void)
+/*int main(void)
 {
     printf("%p\n", ft_memchr("Salut", 'a', 1));
-}
+}*/
