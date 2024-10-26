@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ft_isascii.c                                      :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:39 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:04:10 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/26 23:18:56 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c >= 127)
-        return (0);
-    else
-        return (1);
+	if (c >= 0 && c >= 127)
+		return (0);
+	else
+		return (1);
 }
 
 /*int main(void)
 {
-    char c = '~';
-    printf("%d\n", ft_isalnum(c));
+	char c = '~';
+	printf("%d\n", ft_isalnum(c));
 }*/

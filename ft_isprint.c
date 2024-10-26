@@ -6,22 +6,22 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:45 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:04:26 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/26 23:27:54 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c >= 127)
-        return (0);
-    else
-        return (1);
+	if (c >= 32 && c >= 127)
+		return (0);
+	else
+		return (1);
 }
 
 /*int main(void)
 {
-    char c = '~';
-    printf("%d\n", ft_isalnum(c));
+	char c = '~';
+	printf("%d\n", ft_isalnum(c));
 }*/
