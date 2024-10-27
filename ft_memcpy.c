@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 11:59:49 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/26 23:29:35 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 05:31:00 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t				i;
+	unsigned char		*tmp_dest;
+	const unsigned char	*tmp_src;
 
+	if (!dest && !src)
+		return (dest);
 	i = 0;
+	tmp_dest = (unsigned char *)dest;
+	tmp_src = (const unsigned char *)src;
 	while (i < n)
 	{
-		*(unsigned char *)dest = *(unsigned char *)src;
-		dest++;
-		src++;
+		tmp_dest[i] = tmp_src[i];
 		i++;
 	}
 	return (dest);

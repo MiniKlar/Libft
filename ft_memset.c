@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:35 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/27 02:13:36 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 04:01:29 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,19 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	if (n == 0)
-		return (NULL);
+	ptr = (unsigned char *)s;
 	while (i < n)
-	{
-		*(unsigned char *)s = (unsigned char) c;
-		s++;
-		i++;
-	}
+		ptr[i++] = (unsigned char) c;
 	return (s);
 }
 /*int main(void)
 {
-	char    buffer[100];
+	char    buffer[100] = "SALUT TU VQS VUEN AFWFWA";
 	
-	ft_memset(buffer, '9', 120);
+	ft_memset(buffer, '7', 20);
 	printf("%s\n", buffer);
 }*/
