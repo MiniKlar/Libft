@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:57:19 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/26 23:50:34 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 02:59:58 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 # include <string.h>
 # include <stdio.h>
+# include <unistd.h>
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_isdigit(int c);
 int		ft_isalnum(int c);
-int		ft_isalpha(char *string);
+int		ft_isalpha(int c);
 int		ft_isprint(int c);
 int		ft_strlen(char *string);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);

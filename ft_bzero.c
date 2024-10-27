@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 23:19:30 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/26 23:19:59 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 02:13:23 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,16 @@ void	*ft_bzero(void *s, size_t n)
 		s++;
 		i++;
 	}
+	return (NULL);
 }
 /*int main(void)
 {
 	char    buffer[100] = "Salut";
-	ft_bzero(buffer, 3);
-	printf("%s\n", buffer);
+	char    buffer1[100] = "Salut";
+	char    buffer2[100] = "Salut";
+
+	ft_bzero(buffer, 5);
+	ft_bzero(buffer1, 3);
+	ft_bzero(buffer2, 10);
+	printf("%s\n%s\n%s\n", buffer, buffer1, buffer2);
 }*/

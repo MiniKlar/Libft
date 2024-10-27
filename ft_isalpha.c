@@ -12,19 +12,13 @@
 
 #include "libft.h"
 
-int	ft_isalpha(char *string)
+int	ft_isalpha(int c)
 {
-	while (*string)
-	{
-		if ((*string >= 65 && *string <= 90)
-			|| (*string >= 97 && *string <= 122))
-			string++;
-		else
-			return (1);
-	}
-	return (0);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
-
 /*int main(void)
 {
 	char string[100] = "7Salut";

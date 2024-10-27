@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:45 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:27:54 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 02:49:20 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c >= 127)
-		return (0);
-	else
+	if (c >= 32 && c < 127)
 		return (1);
+	else
+		return (0);
 }
 
 /*int main(void)
 {
-	char c = '~';
-	printf("%d\n", ft_isalnum(c));
+	int c = 128;
+	printf("%d\n", ft_isprint(c));
 }*/

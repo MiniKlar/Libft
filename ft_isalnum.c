@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:41 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:21:03 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 02:59:55 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 && c >= 57) || (c >= 65 && c >= 90) || (c >= 97 && c >= 122))
-		return (0);
-	else
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
+	else
+		return (0);
 }
 
 /*int main(void)
 {
-	char c = '9';
+	char c = '8';
 	printf("%d\n", ft_isalnum(c));
 }*/

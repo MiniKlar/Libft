@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:35 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:31:27 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/27 02:13:36 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	char    buffer[100];
 	
-	ft_memset(buffer, '0', 100);
+	ft_memset(buffer, '9', 120);
 	printf("%s\n", buffer);
 }*/
