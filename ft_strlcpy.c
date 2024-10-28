@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:54 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:35:39 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/28 19:13:27 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 
 size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	size_t	srclen;
-	size_t	i;
+	size_t srclen = ft_strlen(src);
 
-	i = 0;
-	srclen = ft_strlen(src);
-	while (i < size && src[i] != '\0')
+	if (size + 1 > srclen)
+		ft_memcpy(dest, src, srclen + 1);
+	else if (size != 0)
 	{
-		dest[i] = src[i];
-		i++;
+		ft_memcpy(dest, src, size - 1);
+		dest[size - 1] = '\0';
 	}
-	dest[i] = '\0';
 	return (srclen);
 }
 
 /*int main(void)
 {
-	char    dest[100] = "";
-	char    src[100] = "test";
+	char    dest[100] = "bbbbbbbbbbbbbbbbbbbb";
+	char    src[12] = "aaaaaaaaaaaa";
 
-	printf("%zu\n", ft_strlcpy(dest, src, 100));
-	printf("%s\n", dest);
+	printf("%zu\n", ft_strlcpy(dest, src, 12));
 }*/
