@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:14:03 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/28 19:29:37 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/28 23:21:36 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (srclen + dstlen);
 }
 
-int main(void)
+/*int main(void)
 {
 	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
 	char dest[0xF00] = "there is no stars in the sky";
 	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
 
 	printf("%ld\n", ft_strlcat(dest, src, max));
-}
+}*/

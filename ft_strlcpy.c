@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:54 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/28 19:13:27 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/29 00:20:21 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size)
 	else if (size != 0)
 	{
 		ft_memcpy(dest, src, size - 1);
-		dest[size - 1] = '\0';
+		dest[size - 1] = 0;
 	}
 	return (srclen);
 }
