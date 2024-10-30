@@ -1,44 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/29 00:22:54 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/29 18:53:22 by lomont           ###   ########.fr       */
+/*   Created: 2024/10/29 22:50:14 by lomont            #+#    #+#             */
+/*   Updated: 2024/10/29 23:38:10 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	unsigned char	*tmp;
-
-	tmp = malloc(nmemb * size);
-	if (!tmp)
-		return (NULL);
-	ft_bzero(tmp, nmemb * size);
-	return (tmp);
-}
-
-/*int	main(void)
-{
-	char	*str;
+	size_t	src_len;
 	size_t	i;
+	size_t	j;
+	char	*tmp;
 
 	i = 0;
-	str = calloc(5, sizeof(char));
-	if (str == NULL) 
-      printf("\nOut of memory!\n"); 
-   else 
-      printf("\nMemory allocated.\n");
-	while (i < (5 * sizeof(char)))
+	j = 0;
+	src_len = ft_strlen(s1);
+	tmp = malloc(sizeof(char) * src_len);
+	if (!tmp)
+		return (NULL);
+	while (s1[i++] != '\0')
 	{
-		str[i] = 'P';
-		printf("%c\n", str[i]);
-		i++;
-	}
-	printf("%s\n", str);
+		while (set[j] != '\0')
+		{
+			if (set[j] == s1[i])
+			{
+				i++;
+				j = 0;
+			}
+			j++;
+		}
+	}		
+	return (tmp);
+}
+/*int	main(void)
+{
+	char	*tmp;
+	char	set[2] = "ab";
+	char	str[33] = "abababaabbabaSaluttoiabababababa";
+
+	tmp = ft_strtrim(str, set);
+	printf("%s\n", tmp);
 }*/

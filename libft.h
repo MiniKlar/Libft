@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:57:19 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/29 01:05:34 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/30 01:51:38 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isprint(int c);
+int		ft_isascii(int c);
 int		ft_strlen(const char *string);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -40,4 +41,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+char	*ft_strtrim(const char *s1, const char *set);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+int		ft_atoi(const char *str);
 #endif

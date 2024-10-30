@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:33:57 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/29 00:57:23 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/29 18:58:14 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n-- > 0)
 			tmp_dst[n] = tmp_src[n];
 	else
+	{
 		while (i < n)
 		{
 			tmp_dst[i] = tmp_src[i];
 			i++;
 		}
+	}
 	return (dest);
 }
 /*int main(void)
 {
-
 	char    dest[100] = "SALUT00000000";
 	char    src[100] = "BONJOUR";
 	

@@ -24,6 +24,11 @@ SRC = ft_isalnum.c \
 	ft_isdigit.c \
 	ft_strrchr.c \
 	ft_calloc.c \
+	ft_strdup.c \
+	ft_strtrim.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+	ft_atoi.c \
 
 OBJ = $(SRC:.c=.o)
 

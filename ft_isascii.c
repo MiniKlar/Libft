@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 00:04:39 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/26 23:18:56 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/29 19:01:21 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c >= 127)
-		return (0);
-	else
+	if (c >= 0 && c <= 127)
 		return (1);
+	else
+		return (0);
 }
 
 /*int main(void)

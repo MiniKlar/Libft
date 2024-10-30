@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 00:04:54 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/29 22:39:44 by lomont           ###   ########.fr       */
+/*   Created: 2024/10/29 18:29:13 by lomont            #+#    #+#             */
+/*   Updated: 2024/10/29 18:52:35 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
+	char	*tmp;
 	size_t	srclen;
 
-	srclen = ft_strlen(src);
-	if (srclen + 1 > size)
-		ft_memcpy(dest, src, srclen + 1);
-	else if (size != 0)
-	{
-		ft_memcpy(dest, src, size - 1);
-		dest[size - 1] = '\0';
-	}
-	return (srclen);
+	srclen = ft_strlen(s) + 1;
+	tmp = malloc(srclen * sizeof(char));
+	if (!tmp)
+		return (NULL);
+	ft_memmove(tmp, s, srclen);
+	return (tmp);
 }
+// int	main(void)
+// {
+// 	char	*str = "sadfvbf";
+// 	char	*tmp;
 
-/*int main(void)
-{
-	char    dest[100] = "bbbbbbbbbbbbbbbbbbbb";
-	char    src[12] = "aaaaaaaaaaaa";
-
-	ft_strlcpy(dest, src, 25);
-	printf("%s\n", dest);
-}*/
+// 	tmp = ft_strdup(str);
+// 	printf("%s\n", str);
+// 	printf("%s\n", tmp);
+// 	tmp = strdup(str);
+// 	printf("%s\n", tmp);
+// }
