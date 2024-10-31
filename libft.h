@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:57:19 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/31 02:29:11 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/31 18:26:24 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_atoi(const char *str);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char	*ft_strjoin(const char *s1, const char *s2);
+char    *ft_itoa(int n);
 #endif

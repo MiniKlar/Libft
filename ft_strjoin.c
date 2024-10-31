@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 00:04:54 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/31 17:26:20 by miniklar         ###   ########.fr       */
+/*   Created: 2024/10/31 17:37:41 by miniklar          #+#    #+#             */
+/*   Updated: 2024/10/31 18:23:40 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	srclen;
+	char	*new_s;
+	size_t	lens1;
+	size_t	lens2;
 
-	srclen = ft_strlen(src);
-	if (srclen + 1 < size)
-		ft_memcpy(dest, src, srclen + 1);
-	else if (size != 0)
-	{
-		ft_memcpy(dest, src, size - 1);
-		dest[size - 1] = 0;
-	}
-	return (srclen);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	new_s = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	if (!new_s)
+		return (NULL);
+	ft_memcpy(new_s, s1, lens1);
+	ft_memcpy(new_s + lens1, s2, lens2);
+	new_s[lens1 + lens2] = '\0';
+	return (new_s);
 }
-
-// int main(void)
-// {
-// 	char    dest[100] = "bbbbbbbbbbbbbbbbbbbb";
-// 	char    src[12] = "aaaaaaaaaaaa";
-
-// 	ft_strlcpy(dest, src, 8);
-// 	printf("%s\n", dest);
-// }
