@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 22:50:14 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/29 23:38:10 by lomont           ###   ########.fr       */
+/*   Updated: 2024/10/31 02:29:40 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 			}
 			j++;
 		}
-	}		
+	}
 	return (tmp);
 }
 /*int	main(void)
