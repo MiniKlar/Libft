@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:25:10 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/31 20:48:13 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/04 01:00:59 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_negative(int n)
+int	is_negative(long n)
 {
 	if (n < 0)
 		return (1);
@@ -20,57 +20,54 @@ int	is_negative(int n)
 		return (0);
 }
 
-int count_digit(int n)
+int	count_digit(long n)
 {
-	static int counter = 0;
-	if (n != 0)
+	int	counter;
+
+	counter = 0;
+	if (n < 0)
+		n = -n;
+	if (n == 0)
+		counter++;
+	while (n != 0)
 	{
-		counter = counter + 1;
-		//printf("%d\n", counter);
-		return (count_digit (n / 10));
+		n /= 10;
+		counter++;
 	}
-	else
-		return (counter);
+	return (counter);
 }
 
 char	*ft_itoa(int n)
 {
-	char 	*str;
+	char	*str;
 	size_t	len_n;
+	size_t	i;
 	int		neg;
+	long	n1;
 
-	neg = is_negative(n);
-	if (n != 0)
-	{
-		len_n = count_digit(n) + neg;
-		//printf("%d\n", count_digit(n));
-	}
-	else
-		len_n = 1 + neg;
+	n1 = n;
+	neg = is_negative(n1);
+	len_n = count_digit(n1) + neg;
 	str = malloc(sizeof(char) * (len_n + 1));
 	if (!str)
-	{
-		printf("L'allocation a echoue");
 		return (NULL);
-	}
+	i = len_n;
 	if (neg == 1)
-		n = n * -1;
-	while (len_n-- > 0)
+		n1 = n1 * -1;
+	while (i-- != 0)
 	{
-		str[len_n] = (n % 10) + '0';
-		n /= 10;
+		str[i] = (n1 % 10) + '0';
+		n1 /= 10;
 	}
 	if (neg == 1)
 		str[0] = '-';
-	str[len_n] = '\0';
+	str[len_n] = 0;
 	return (str);
 }
 /*int	main(void)
 {
 	char *str;
-	int n;
 
-	n = -1000034;
-	str = ft_itoa(n);
+	str = ft_itoa(-10004);
 	printf("%s\n", str);
 }*/
