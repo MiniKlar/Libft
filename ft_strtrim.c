@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 22:50:14 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/31 02:29:40 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/05 00:21:47 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,76 @@
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	size_t	src_len;
+	size_t	i;
+
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i - 1]))
+		i--;
+	return (ft_substr(s1, 0, i));
+}
+/*{
 	size_t	i;
 	size_t	j;
+	size_t	k;
+	size_t	l;
 	char	*tmp;
 
 	i = 0;
-	j = 0;
-	src_len = ft_strlen(s1);
-	tmp = malloc(sizeof(char) * src_len);
-	if (!tmp)
-		return (NULL);
-	while (s1[i++] != '\0')
+	j = ft_strlen(s1) - 1;
+	l = 0;
+	while (l == 0)
 	{
-		while (set[j] != '\0')
+		k = 0;
+		while (set[k] != '\0')
 		{
-			if (set[j] == s1[i])
+			if (s1[i] != set[k])
 			{
-				i++;
-				j = 0;
+				k++;
+				l = 1;
 			}
-			j++;
+			else if (s1[i] == set[k])
+			{
+				l = 0;
+				i++;
+			}
 		}
 	}
+	l = 0;
+	while (l == 0)
+	{
+		k = 0;
+		while (set[k] != '\0')
+		{
+			if (s1[j] != set[k])
+			{
+				k++;
+				l = 1;
+			}
+			else if (s1[j] == set[k])
+			{
+				l = 0;
+				j--;
+			}
+		}
+	}
+	printf("%ld\n",i);
+	printf("%ld\n",j);
+	tmp = malloc(sizeof(char) * ((j - i) + 1) + 1);
+	if (!tmp)
+		return (NULL);
+	while (i <= j)
+		tmp[k++] = s1[i++];
+	tmp[k] = '\0';
+	if (tmp[k] == '\0')
+		printf("dernier caractere est 0\n ou %c: \n", tmp[k]);
 	return (tmp);
-}
-/*int	main(void)
+}*/
+int	main(void)
 {
 	char	*tmp;
-	char	set[2] = "ab";
-	char	str[33] = "abababaabbabaSaluttoiabababababa";
 
-	tmp = ft_strtrim(str, set);
+	tmp = ft_strtrim("zzaaSalutzza", "za");
 	printf("%s\n", tmp);
-}*/
+}
