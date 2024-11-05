@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
+/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 22:50:14 by lomont            #+#    #+#             */
-/*   Updated: 2024/11/05 00:21:47 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/05 00:39:07 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,10 @@ char	*ft_strtrim(const char *s1, const char *set)
 		printf("dernier caractere est 0\n ou %c: \n", tmp[k]);
 	return (tmp);
 }*/
-int	main(void)
-{
-	char	*tmp;
+// int	main(void)
+// {
+// 	char	*tmp;
 
-	tmp = ft_strtrim("zzaaSalutzza", "za");
-	printf("%s\n", tmp);
-}
+// 	tmp = ft_strtrim("zzzbabzaaaFE!Nzzab", "zab");
+// 	printf("%s\n", tmp);
+// }
