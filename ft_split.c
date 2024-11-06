@@ -6,7 +6,7 @@
 /*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 00:40:10 by miniklar          #+#    #+#             */
-/*   Updated: 2024/11/05 03:14:44 by miniklar         ###   ########.fr       */
+/*   Updated: 2024/11/06 19:46:44 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,17 @@ char *fill_word(const char *s, char c)
 	word = malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
-	while (*s)
-		word[i] = *s;
-	word[len] = '\0';
+	// else
+		// printf("L'allocation a reussi pour le word\n");
+	while (i < len)
+	{
+		// printf("le caractère est :%c\n", s[i]);			
+		word[i] = s[i];
+		i++;
+	}
+	// printf("Voici le mot complet : %s\n", word);
+	word[len + 1] = '\0';
+	// printf("Voici le mot complet : %s\n", word);
 	return (word);
 }
 char **ft_split(const char *s, char c)
@@ -57,33 +65,43 @@ char **ft_split(const char *s, char c)
 	char	**array;
 	size_t	i;
 
+	// printf("Le nombre de mots est : %d\n", word_counter(s, c));
 	array = malloc((sizeof(char *) * (word_counter(s, c) + 1)));
 	if (!array)
 		return (NULL);
+	// else
+		// printf("L'allocation a reussi pour l'array complet\n");
 	i = 0;
 	while (*s != '\0')
 	{
 		while (*s == c)
 			s++;
-		if (*s != c)
+		if (*s != c && *s != '\0')
 		{
+			// printf("%c\n", *s);
 			array[i] = fill_word(s, c);
-			if (!array[i++])
+			if (!array[i])
 				return(ft_free(array, i), NULL);
+			// else
+				//printf("L'allocation a reussi pour le %ld array\n\n", i);
+			//printf("Voici l'array %ld complet : %s\n", i, array[i]);
+			i++;
 		}
-		while (*s != c)
+		while (*s != c && *s != '\0')
 			s++;
+		//printf("mon S se situe là: %c\n", *s);
 	}
-	array = NULL;
+	array[i] = NULL;
 	return (array);
 }
 
-int	main(void)
-{
-	char **array;
-	//size_t	i;
+// int	main(void)
+// {
+// 	char **array;
 
-	//i = 0;
-	array = ft_split(",,,,,,Salut,tu,vas,bien,toi", ',');
-	printf("%s\n", array[0]);
-}
+// 	array = ft_split(".............Salut.tu.vas.bien.toi............", '.');
+// 	printf("%s\n", array[0]);
+// 	printf("%s\n", array[1]);
+// 	printf("%s\n", array[2]);
+// 	printf("%s\n", array[3]);
+// }
