@@ -6,7 +6,7 @@
 /*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:57:19 by lomont            #+#    #+#             */
-/*   Updated: 2024/11/06 19:43:52 by miniklar         ###   ########.fr       */
+/*   Updated: 2024/11/12 01:54:55 by miniklar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <string.h>
 # include <stdio.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);
@@ -52,10 +58,7 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_itoa(int n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(const char *s, char c);
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 #endif

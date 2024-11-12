@@ -38,18 +38,27 @@ SRC = ft_isalnum.c \
 
 OBJ = $(SRC:.c=.o)
 
+SRCBONUS = ft_lstadd_front.c \
+		ft_lstnew.c \
+		ft_lstsize.c \
+
+OBJBONUS = $(SRCBONUS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) *.o
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -I. -o $@ -c $^
 
 make: make all
 
+bonus:	$(OBJ) $(OBJBONUS)
+		ar rcs $(NAME) $(OBJ) $(OBJBONUS)
+
 clean:
-	rm -f *.o
+	rm -f $(OBJ) $(OBJBONUS)
 
 fclean: clean
 	rm -f $(NAME)
