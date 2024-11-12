@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 00:40:10 by miniklar          #+#    #+#             */
-/*   Updated: 2024/11/06 20:12:41 by miniklar         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:21:50 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	word_counter(const char *s, char c)
+static int	word_counter(const char *s, char c)
 {
 	int	counter;
 
@@ -29,14 +29,16 @@ int	word_counter(const char *s, char c)
 	return (counter);
 }
 
-void	ft_free(char **array, size_t i)
+static void	ft_free(char **array, size_t i)
 {
-	while (i > 0)
+	while (i-- > 0)
+	{
 		free (array[i]);
+	}
 	free (array);
 }
 
-char	*fill_word(const char *s, char c)
+static char	*fill_word(const char *s, char c)
 {
 	char	*word;
 	size_t	len;
@@ -89,9 +91,9 @@ char	**ft_split(const char *s, char c)
 // {
 // 	char **array;
 
-// 	array = ft_split("nonempty.lol", '.');
+// 	array = ft_split("salut,lol", ',');
 // 	printf("%s\n", array[0]);
 // 	printf("%s\n", array[1]);
-// 	//printf("%s\n", array[2]);
+// 	printf("%s\n", array[2]);
 // 	//printf("%s\n", array[3]);
 // }

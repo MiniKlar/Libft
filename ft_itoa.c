@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:25:10 by miniklar          #+#    #+#             */
-/*   Updated: 2024/11/04 01:00:59 by miniklar         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:24:33 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_negative(long n)
+static int	is_negative(long n)
 {
 	if (n < 0)
 		return (1);
@@ -20,7 +20,7 @@ int	is_negative(long n)
 		return (0);
 }
 
-int	count_digit(long n)
+static int	count_digit(long n)
 {
 	int	counter;
 

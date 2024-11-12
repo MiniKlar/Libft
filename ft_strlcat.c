@@ -6,12 +6,11 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:14:03 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/29 22:14:25 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/12 22:26:50 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
