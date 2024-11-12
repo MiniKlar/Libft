@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 21:24:16 by lomont            #+#    #+#             */
-/*   Updated: 2024/11/12 21:24:24 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 00:22:06 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
-		return ;
-	(*del)(lst->content);
+	del(lst->content);
 	free(lst);
 }
