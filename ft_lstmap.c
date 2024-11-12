@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 21:37:04 by lomont            #+#    #+#             */
-/*   Updated: 2024/11/13 00:14:49 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 00:24:46 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 
 	if (!lst || !f || !del)
-        return (NULL);
+		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
