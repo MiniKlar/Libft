@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 21:21:36 by lomont            #+#    #+#             */
-/*   Updated: 2024/11/12 21:22:24 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 03:00:30 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,18 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
+
+// int	main(void)
+// {
+// 	t_list *node;
+// 	int a;
+// 	int *ptr;
+
+// 	a = 60;
+// 	ptr = &a;
+// 	node = ft_lstnew(ptr);
+// 	ft_lstadd_back(&node, ft_lstnew(ptr));
+// 	ft_lstadd_back(&node, ft_lstnew(ptr));
+// 	ft_lstadd_back(&node, ft_lstnew(ptr));
+// 	printf("%d\n", ft_lstsize(node));
+// }
