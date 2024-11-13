@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miniklar <miniklar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:37:41 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/31 18:23:40 by miniklar         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:27:21 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,10 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	new_s[lens1 + lens2] = '\0';
 	return (new_s);
 }
+/*int	main(void)
+{
+	char *str;
+
+	str = ft_strjoin("Salut"," toi");
+	printf("%s\n", str);
+}*/

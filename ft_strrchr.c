@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:45:20 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/29 23:37:14 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 01:51:30 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ char	*ft_strrchr(const char *s, int c)
 }
 /*int main(void)
 {
-	// printf("%s\n", ft_strrchr("sazlutztoi", 'u'));
-	printf("~%+-23.4d~\n", 54548);
+	printf("%s\n", ft_strrchr("sazlutztoi", 'o'));
 }*/

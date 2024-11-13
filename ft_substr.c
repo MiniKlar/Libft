@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 20:01:17 by lomont            #+#    #+#             */
-/*   Updated: 2024/11/04 21:53:19 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 01:54:21 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-//int	main(void)
-// {
-// 	char *substr;
+/*int	main(void)
+{
+	char *substr;
 
-// 	substr = ft_substr("Bonjour comment ca va?", 5, 8);
-// 	printf("%s\n", substr);
-// }
+	substr = ft_substr("Bonjour comment ca va?", 5, 8);
+	printf("%s\n", substr);
+}*/

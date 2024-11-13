@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:31:30 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/28 21:37:57 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 01:15:24 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ char	*ft_strchr(const char *s, int c)
 
 /*int main(void)
 {
-	printf("%s\n", ft_strchr("\0", 'c'));
+	printf("%s\n", ft_strchr("sclut", 'c'));
 }*/

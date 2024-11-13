@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 11:59:49 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/27 05:31:00 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 00:58:18 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char    dest[100] = "SALUT00000000";
 	char    src[100] = "111111";
 	
-	ft_memcpy(dest, src, 10);
+	ft_memcpy(dest, src, 4);
 	printf("%s\n", dest);
 }*/

@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:25:31 by miniklar          #+#    #+#             */
-/*   Updated: 2024/10/28 23:31:08 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 00:54:55 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 /*int main(void)
 {
-	//printf("%d\n", memcmp("salut", "sazut", 5));
-	//printf("%d\n", memcmp("salut", "bonjour", 5));
-	//printf("%d\n", memcmp("Hello", "sazut", 6));
-	//printf("%d\n", memcmp("Hello", "Hello", 6));
-	//printf("%d\n", memcmp("salut", "toi", 0));
-	//printf("%d\n", memcmp("teste", "testex", 6));
-	//printf("%d\n", memcmp("abcdef", "abc\375xx", 6));
-	printf("%d\n", memcmp("abc", "abc", 7));
-	//printf("%d\n", memcmp("abcdefghij", "abcdefgxyz", 7));
-	//printf("%d\n", memcmp("abcdefgh", "abcdzxyz", 7));
+	printf("%d\n", memcmp("salut", "sazut", 5));
+	printf("%d\n", memcmp("salut", "bonjour", 5));
+	printf("%d\n", memcmp("Hello", "sazut", 6));
+	printf("%d\n", memcmp("Hello", "Hello", 6));
+	printf("%d\n", memcmp("salut", "toi", 0));
+	printf("%d\n", memcmp("teste", "testex", 6));
+	printf("%d\n", memcmp("abcdef", "abc\375xx", 6));
+	printf("%d\n", memcmp("abc", "abc", 3));
+	printf("%d\n", memcmp("abcdefghij", "abcdefgxyz", 7));
+	printf("%d\n", memcmp("abcdefgh", "abcdzxyz", 7));
 }*/
