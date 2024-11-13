@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:56:16 by lomont            #+#    #+#             */
-/*   Updated: 2024/10/26 23:28:31 by lomont           ###   ########.fr       */
+/*   Updated: 2024/11/13 00:53:01 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 /*int main(void)
 {
-	printf("%p\n", ft_memchr("Salut", 'a', 1));
+	printf("%p\n", ft_memchr("Salut", 'a', 2));
 }*/
